@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
-                    Toast.makeText(getApplication(),"你同意了",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplication(),"你bu不同意了",Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(getApplication(),"你不同意",Toast.LENGTH_SHORT).show();
                 }
