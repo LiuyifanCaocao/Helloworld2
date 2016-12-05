@@ -7,10 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
+    ImageView mImageView;
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +62,13 @@ public class MainActivity extends Activity {
                 button.setText("哈哈");
             }
         });
+        mImageView = (ImageView) findViewById(R.id.to_selfView);
+        mImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,ViewActivity.class));
+            }
+        });
     }
     View.OnClickListener clickListener1 = new View.OnClickListener() {
         @Override
@@ -68,5 +77,7 @@ public class MainActivity extends Activity {
 
         }
     };
+
+
 }
 
